@@ -8,9 +8,7 @@ const Header = () => {
         <h1 className="text-4xl font-bold mb-4 font-playfair">
           Welcome to My Stop
         </h1>
-        <p className="text-lg">
-          Your one stop solution for your trendy outfits.
-        </p>
+        <p className="text-lg">Your one stop solution for all your needs.</p>
       </div>
     </header>
   );

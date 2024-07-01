@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart, removeFromCart } from "../Cart/cartSlice";
+import { addToCart, removeFromCart } from "../../Slices/cartSlice";
 const ProductCard = ({ prod }) => {
   const dispatch = useDispatch();
   const isInCart = useSelector((state) =>
@@ -55,7 +55,7 @@ const ProductCard = ({ prod }) => {
         <div>
           {isInCart ? (
             <button
-              style={{ marginLeft: "50px" }}
+              style={{ marginLeft: "100px" }}
               className="bg-gray-500 hover:bg-red-500 text-white font-bold py-1 px-1 rounded"
               onClick={handleRemoveFromCart}
             >
@@ -63,7 +63,7 @@ const ProductCard = ({ prod }) => {
             </button>
           ) : (
             <button
-              style={{ marginLeft: "50px" }}
+              style={{ marginLeft: "100px" }}
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded"
               onClick={addToCartHandler}
             >

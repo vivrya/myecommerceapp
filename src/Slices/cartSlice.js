@@ -55,6 +55,7 @@ export const cartSlice = createSlice({
             exist.quantity--;
             state.totalPrice = state.totalPrice - prod.price;
           }
+          state.totalQuantity--;
         }
       } catch (error) {
         return error;

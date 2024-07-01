@@ -1,13 +1,12 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { removeFromCart, addToCart } from "./cartSlice";
+import { removeFromCart, addToCart } from "../../Slices/cartSlice";
 
 const Cart = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart);
   console.log("cartItems", cartItems);
   const handleRemoveFromCart = (prod) => {
-    console.log("remove", prod);
     dispatch(
       removeFromCart({
         id: prod.id,
@@ -20,7 +19,6 @@ const Cart = () => {
     );
   };
   const addToCartHandler = (prod) => {
-    console.log("adding", prod);
     dispatch(
       addToCart({
         id: prod.id,
